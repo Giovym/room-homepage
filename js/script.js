@@ -1,10 +1,15 @@
 "use strict";
 
-const sectionPhoto = document.querySelector(".section-photo");
+const navBar = document.getElementById("nav-bar");
+const closeMenu = document.getElementById("menu-close");
+const openMenu = document.getElementById("menu-open");
+const sectionPhoto = document.getElementById("section-photo");
+const sectionH1 = document.getElementById("section-h1");
+const sectionAbout = document.getElementById("section-about");
 const headingPrimary = document.getElementById("heading-primary");
 const paragraph = document.getElementById("paragraph");
-const arrowLeft = document.querySelector(".arrow-left");
-const arrowRight = document.querySelector(".arrow-right");
+const arrowLeft = document.getElementById("arrow-left");
+const arrowRight = document.getElementById("arrow-right");
 
 let currentSlide = 1;
 const maxSlide = 3;
@@ -44,7 +49,7 @@ arrowRight.addEventListener("click", function () {
   } else {
     currentSlide++;
   }
-  sectionPhoto.style.backgroundImage = `url("https://giovym.github.io/room-homepage/images/desktop-image-hero-${currentSlide}.jpg")`;
+  sectionPhoto.style.backgroundImage = `url("../images/desktop-image-hero-${currentSlide}.jpg")`;
   currentHeadingPrimary(currentSlide);
   currentParagraph(currentSlide);
 });
@@ -55,7 +60,21 @@ arrowLeft.addEventListener("click", function () {
   } else {
     currentSlide--;
   }
-  sectionPhoto.style.backgroundImage = `url("https://giovym.github.io/room-homepage/images/desktop-image-hero-${currentSlide}.jpg")`;
+  sectionPhoto.style.backgroundImage = `url("../images/desktop-image-hero-${currentSlide}.jpg")`;
   currentHeadingPrimary(currentSlide);
   currentParagraph(currentSlide);
+});
+
+openMenu.addEventListener("click", function () {
+  navBar.style.display = "flex";
+  sectionPhoto.style.opacity = "0.5";
+  sectionH1.style.opacity = "0.5";
+  sectionAbout.style.opacity = "0.5";
+});
+
+closeMenu.addEventListener("click", function () {
+  navBar.style.display = "none";
+  sectionPhoto.style.opacity = "1";
+  sectionH1.style.opacity = "1";
+  sectionAbout.style.opacity = "1";
 });

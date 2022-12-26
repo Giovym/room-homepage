@@ -28,10 +28,48 @@
     <main>
       <section class="section flex flex-col md:flex-row">
         <div
-          class="section-photo md:container w-screen flex flex-col md:flex-row lg:w-3/5"
+          id="nav-bar"
+          class="absolute z-10 hidden items-center bg-white w-screen py-8"
+        >
+          <div id="menu-close" class="ml-6">
+            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.364.222l1.414 1.414L9.414 8l6.364 6.364-1.414 1.414L8 9.414l-6.364 6.364-1.414-1.414L6.586 8 .222 1.636 1.636.222 8 6.586 14.364.222z"
+                fill="#000"
+                fill-rule="evenodd"
+                opacity=".201"
+              />
+            </svg>
+          </div>
+          <nav class="flex gap-5 mx-auto md:hidden">
+            <a
+              class="text-black text-sm font-bold mt-1 pb-1 hover:border-b-2"
+              href="#"
+              >home</a
+            >
+            <a
+              class="text-black text-sm font-bold mt-1 pb-1 hover:border-b-2"
+              href="#"
+              >shop</a
+            >
+            <a
+              class="text-black text-sm font-bold mt-1 pb-1 hover:border-b-2"
+              href="#"
+              >about</a
+            >
+            <a
+              class="text-black text-sm font-bold mt-1 pb-1 hover:border-b-2"
+              href="#"
+              >contact</a
+            >
+          </nav>
+        </div>
+        <div
+          id="section-photo"
+          class="flex flex-col md:flex-row md:container w-screen lg:w-3/5"
         >
           <div class="relative flex justify-start">
-            <div class="menu absolute mt-8 ml-6 md:hidden">
+            <div id="menu-open" class="absolute mt-10 ml-6 md:hidden">
               <svg width="20" height="14" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M20 12v2H0v-2h20zm0-6v2H0V6h20zm0-6v2H0V0h20z"
@@ -40,8 +78,10 @@
                 />
               </svg>
             </div>
+
             <div
-              class="logo flex mx-auto md:ml-16 md:mr-0 md:items-start mt-8 md:mt-16"
+              id="logo"
+              class="flex mx-auto md:ml-16 md:mr-0 md:items-start mt-10 md:mt-16"
             >
               <svg width="62" height="14" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -76,9 +116,10 @@
               >
             </nav>
           </div>
-          <div class="arrows flex mt-auto ml-auto bg-black lg:translate-x-full">
+          <div class="flex mt-auto ml-auto bg-black lg:translate-x-full">
             <div
-              class="arrow-left bg-black hover:bg-veryDarkGray px-8 py-6 flex items-center cursor-pointer"
+              id="arrow-left"
+              class="bg-black hover:bg-veryDarkGray px-8 py-6 flex items-center cursor-pointer"
             >
               <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -90,7 +131,8 @@
               </svg>
             </div>
             <div
-              class="arrow-right bg-black hover:bg-veryDarkGray px-8 py-6 flex items-center cursor-pointer"
+              id="arrow-right"
+              class="bg-black hover:bg-veryDarkGray px-8 py-6 flex items-center cursor-pointer"
             >
               <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -105,7 +147,8 @@
         </div>
 
         <div
-          class="section-h1 md:container w-screen flex flex-col text-center px-8 lg:w-2/5 md:px-0 mt-10 md:mt-24"
+          id="section-h1"
+          class="md:container w-screen flex flex-col text-center px-8 lg:w-2/5 md:px-0 mt-10 md:mt-24"
         >
           <h1
             id="heading-primary"
@@ -162,7 +205,7 @@
           </div> -->
         </div>
       </section>
-      <section class="about md:flex md:justify-between">
+      <section id="section-about" class="md:flex md:justify-between">
         <div class="md:w-auto">
           <img src="images/image-about-dark.jpg" alt="" />
         </div>
