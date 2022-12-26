@@ -44,7 +44,7 @@ arrowRight.addEventListener("click", function () {
   } else {
     currentSlide++;
   }
-  sectionPhoto.style.backgroundImage = `url(../images/desktop-image-hero-${currentSlide}.jpg)`;
+  sectionPhoto.style.backgroundImage = `url(images/desktop-image-hero-${currentSlide}.jpg)`;
   currentHeadingPrimary(currentSlide);
   currentParagraph(currentSlide);
 });
@@ -55,7 +55,7 @@ arrowLeft.addEventListener("click", function () {
   } else {
     currentSlide--;
   }
-  sectionPhoto.style.backgroundImage = `url(../images/desktop-image-hero-${currentSlide}.jpg)`;
+  sectionPhoto.style.backgroundImage = `url(images/desktop-image-hero-${currentSlide}.jpg)`;
   currentHeadingPrimary(currentSlide);
   currentParagraph(currentSlide);
 });
